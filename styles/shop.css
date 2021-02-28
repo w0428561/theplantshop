@@ -1,0 +1,463 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+}
+body {
+  height: 100% !important;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* nav part */
+.logo {
+  position: absolute;
+  top: 20%;
+  z-index: 20;
+}
+.logo img {
+  width: 50%;
+}
+.nav {
+  position: absolute;
+  width: 80%;
+  height: 100px;
+  display: block;
+  top: 0;
+  z-index: 1;
+  margin-top: 5%;
+}
+.right-nav {
+  position: absolute;
+  margin-top: 5%;
+  font-size: 32px;
+  right: 0;
+}
+.right-nav .ul {
+  float: right;
+}
+.nav li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+  display: inline;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* first-section */
+.img-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img-section h1 {
+  position: relative;
+  text-align: center;
+  font-weight: 200;
+  color: #ffffff;
+  font-size: 70px;
+  z-index: 1;
+}
+.img-section .main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  filter: brightness(70%);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* plants section */
+.plants-section {
+  background-color: #ffffff;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.plants-header {
+  width: 100%;
+  top: 10%;
+  font-size: 30px;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 0;
+  text-align: center;
+  color: rgb(10, 10, 10);
+}
+.plants-header h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 50%;
+  margin-top: 7%;
+  align-content: center;
+}
+.container img {
+  width: 350px;
+  height: 350px;
+}
+
+.container .image {
+  /* transition: 0.5s ease; */
+  backface-visibility: hidden;
+  border-radius: 15%;
+}
+.container .middle {
+  /* transition: 0.5s ease; */
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.plants:hover .image {
+  filter: brightness(30%);
+  transform: scale(1.02);
+}
+
+.plants:hover .middle {
+  opacity: 1;
+  transition: 0.6s ease-in-out;
+}
+
+.inside {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 35px;
+  margin-bottom: 10%;
+  color: white;
+}
+.plants .hidden-button {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  width: 180px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 15px;
+  border: solid 6px #e6db85;
+  background-color: #e6db8500;
+  color: #e6db85;
+  cursor: pointer;
+  top: 45%;
+  position: absolute;
+  text-align: center;
+}
+.plants .image {
+  filter: brightness(70%);
+}
+.plants:hover .hidden-button {
+  opacity: 0;
+}
+.inside-button {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #e6db85;
+  color: black;
+  cursor: pointer;
+}
+.inside-button:hover {
+  transform: scale(1.05);
+}
+
+/* shop detail */
+
+.shop-detail-section {
+  background-color: #ffffff;
+  padding: 5%;
+  height: auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.shop-header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  text-decoration: underline wavy#dbd077;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 0 8%;
+}
+.shop-image img {
+  width: 50%;
+  margin: 0 5% 10%;
+  padding-bottom: 5%;
+  float: left;
+}
+.details p {
+  text-align: justify;
+  font-size: 1.4rem;
+  line-height: 40px;
+}
+.details span1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+.details span2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color:#dbd077;
+}
+/* footer section */
+.footer-section {
+  height: 60vh;
+  padding: 5%;
+  background-color: #114142;
+  position: relative;
+  justify-content: space-around;
+}
+.footer-contents {
+  color: white;
+  font-weight: 300;
+  margin: 2%;
+  vertical-align: baseline;
+}
+.footer-contents h5 {
+  top: 0;
+  font-size: 33px;
+  margin-bottom: 20px;
+}
+.footer-contents ul {
+  justify-content: flex-start;
+}
+.footer-contents li {
+  list-style: none;
+  font-size: 23px;
+  line-height: 50px;
+}
+.footer-contents input {
+  background-color: #114142;
+  color: #e6db85;
+  font-size: 27px;
+  border-bottom: 2px solid white;
+  width: 300px;
+  height: 50px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+}
+::placeholder {
+  color: #85b5b6;
+  font-size: 20px;
+}
+.footer-contents button {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  margin-top: 20px;
+  border: solid 6px #e6db85;
+  font-size: 20px;
+  z-index: 1000;
+  width: 150px;
+  height: 50px;
+  color: #e6db85;
+  border-radius: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  top: 70%;
+}
+.footer-contents button:hover {
+  background-color: #e6db85;
+  color: black;
+}
+
+#bottom-name {
+  position: absolute;
+  font-size: 20px;
+  color: rgb(172, 196, 192);
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .logo img {
+    width: 40%;
+  }
+
+  .right-nav {
+    position: absolute;
+    margin-top: 0%;
+    font-size: 28px;
+    top: 50%;
+    right: 0;
+  }
+
+  .img-section h1 {
+    font-size: 50px;
+  }
+
+  .shop-image img {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+  .container img {
+    width: 250px;
+    height: 250px;
+  }
+  .container .hidden-title {
+    font-size: 25px;
+  }
+
+  .inside {
+    font-size: 25px;
+  }
+  .inside-button {
+    width: 100px;
+    height: 35px;
+  }
+
+  .plants-header {
+    top: 10%;
+    font-size: 20px;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 5%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .footer-contents h5 {
+    margin-top: 10%;
+    font-size: 30px;
+  }
+  .footer-contents li {
+    font-size: 23px;
+    line-height: 35px;
+  }
+  .footer-contents button {
+    margin-top: 15px;
+    border: solid 3px #e6db85;
+  }
+
+  #bottom-name {
+    position: absolute;
+    font-size: 18px;
+    bottom: 0;
+    width: 90%;
+    text-align: right;
+    margin: 20px 0 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo img {
+    width: 30%;
+  }
+  .nav li {
+    padding-left: 10px;
+  }
+
+  .top-nav {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+  .right-nav {
+    position: absolute;
+    margin-top: 5%;
+    font-size: 15px;
+    top: 50%;
+    right: 0;
+  }
+
+  .img-section h1 {
+    font-size: 30px;
+  }
+  #mainbutton {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .container img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .plants-header {
+    position: relative;
+    top: 5%;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 5%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .footer-contents h5 {
+    margin-top: 15%;
+    font-size: 23px;
+    margin-bottom: 3%;
+  }
+  .footer-contents li {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .footer-contents button {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .footer-contents input {
+    width: 250px;
+  }
+}
+@media screen and (max-height: 1000px) {
+}
+
+@media screen and (max-height: 800px) {
+  .logo img {
+    width: 30%;
+  }
+  .plants-section {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+  }
+
+  .footer-section {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
